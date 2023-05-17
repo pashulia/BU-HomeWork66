@@ -4,7 +4,7 @@ pragma solidity 0.8.19;
 
 contract Target {
 
-    uint256 multiplier;
+    uint256 public multiplier;
 
     constructor(uint256 _multiplier){
         multiplier = _multiplier;

@@ -34,7 +34,7 @@ contract Caller {
         require(stakes[msg.sender].value > 0, "You don't have a stake");
         require(block.timestamp > stakes[msg.sender].lockTime, "You can't take out yet a stake");
         uint256 value = stakes[msg.sender].value;
-        stakes[msg.sender].value = 0;
+        delete stakes[msg.sender];
         payable(msg.sender).transfer(value);
     }
 
